@@ -25,8 +25,9 @@ public class RunAnalysis {
 
     for (Integer key : traffic.keySet()) {
         System.out.println(key+","+traffic.get(key));
-        pWriter.println(key+","+traffic.get(key));
+        pWriter.println(key+";"+traffic.get(key));
     }
+    pWriter.close();
 
     }
 }
