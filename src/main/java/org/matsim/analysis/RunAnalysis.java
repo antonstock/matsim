@@ -23,11 +23,13 @@ public class RunAnalysis {
         //Pfad der Output-Datei
         PrintWriter pWriter = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\anton\\IdeaProjects\\matsim-serengeti-park-hodenhagen-master\\scenarios\\serengeti-park-v1.0\\output\\output-serengeti-park-v1.0-run1\\linkleave2.csv")));
 
-    for (Integer key : traffic.keySet()) {
-        System.out.println(key+","+traffic.get(key));
-        pWriter.println(key+";"+traffic.get(key));
-    }
-    pWriter.close();
+        pWriter.println("Uhrzeit" + ";" + "Anzahl Fahrzeuge");
+
+        for (Integer key : traffic.keySet()) {
+            System.out.println(key + "," + traffic.get(key));
+            pWriter.println(key + ";" + traffic.get(key));
+        }
+        pWriter.close();
 
     }
 }
